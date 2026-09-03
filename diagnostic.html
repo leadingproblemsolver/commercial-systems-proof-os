@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A concrete post-lead bottleneck diagnostic for home-service agencies and their clients.">
+  <title>Post-Lead Bottleneck Check — Taha Aslam</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#121b2c;--line:#26354f;--text:#f6f8fb;--muted:#aeb9cc;--accent:#dbe8ff;--max:1060px}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit} .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}.nav{padding:22px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+    .brand{font-weight:750;text-decoration:none}.small{font-size:13px;color:var(--muted)}
+    .hero{padding:72px 0 54px}.eyebrow{font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+    h1{font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.045em;max-width:900px;margin:0 0 22px}.lead{font-size:clamp(19px,2.5vw,25px);max-width:820px;color:var(--accent);margin:0 0 28px}
+    .support{max-width:760px;color:var(--muted);font-size:17px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{border:1px solid var(--line);padding:12px 17px;border-radius:9px;text-decoration:none;font-weight:700;background:var(--panel);cursor:pointer;color:var(--text)}.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+    section{padding:48px 0;border-top:1px solid var(--line)}h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.025em;line-height:1.1;margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}.card h3{font-size:19px;margin:0 0 8px}.card p{margin:0;color:var(--muted)}
+    .flow{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:24px 0}.step{border:1px solid var(--line);border-radius:9px;padding:13px 8px;text-align:center;background:var(--panel);font-weight:650;font-size:14px}.arrow{display:none}
+    .example{background:#0f1929;border:1px solid var(--line);border-radius:14px;padding:26px}.example-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:750}.value{font-size:17px;margin:5px 0 0}.note{border-left:3px solid #7286a8;padding:10px 14px;color:var(--muted);margin-top:18px}
+    .deliverables{display:grid;grid-template-columns:1fr 1fr;gap:12px}.deliverable{padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+    .cta{padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.prompt{white-space:pre-wrap;background:#09101c;border:1px solid var(--line);border-radius:10px;padding:16px;color:var(--accent);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;margin:16px 0}.status{min-height:24px;color:var(--muted);font-size:14px;margin-top:8px}footer{padding:34px 0 48px;color:var(--muted);font-size:13px}
+    @media(max-width:800px){.grid,.example-grid,.deliverables{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.hero{padding-top:48px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a class="brand" href="/">Taha Aslam</a><span class="small">Post-lead workflow diagnostics</span></nav>
+
+  <header class="hero">
+    <p class="eyebrow">For agencies serving home-service businesses</p>
+    <h1>You generate the leads. I find where they get stuck before becoming jobs.</h1>
+    <p class="lead">Give me one client workflow. I map the path from new lead to booked job, isolate the first expensive handoff worth testing, and return the smallest concrete fix to try before adding more ad spend, staff, or software.</p>
+    <p class="support">Best fit: HVAC, plumbing, electrical, roofing, mechanical and other service businesses where leads are already arriving but response, quoting, booking, dispatch or follow-up still feels inconsistent.</p>
+    <div class="actions"><a class="btn primary" href="#send">Map one client workflow</a><a class="btn" href="#example">See an example output</a></div>
+  </header>
+
+  <section>
+    <p class="eyebrow">What I inspect</p>
+    <h2>The part your campaigns cannot fix by themselves.</h2>
+    <div class="flow" aria-label="Lead-to-job workflow">
+      <div class="step">Lead arrives</div><div class="step">Response</div><div class="step">Qualify</div><div class="step">Quote</div><div class="step">Book</div><div class="step">Dispatch</div><div class="step">Follow-up</div>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Where is the delay?</h3><p>Missed calls, slow callbacks, owner-only quoting, booking friction, dispatch confusion or stalled follow-up.</p></div>
+      <div class="card"><h3>What is actually causing it?</h3><p>I separate the visible symptom from competing causes before anyone buys a tool or adds headcount.</p></div>
+      <div class="card"><h3>What should we test first?</h3><p>One bounded change with a clear measurement. If the evidence is weak, the answer can be “do not change this yet.”</p></div>
+    </div>
+  </section>
+
+  <section id="example">
+    <p class="eyebrow">Example output</p>
+    <h2>Concrete enough to act on, bounded enough not to guess.</h2>
+    <div class="example">
+      <div class="example-grid">
+        <div><div class="label">Observed symptom</div><p class="value">Paid leads are coming in, but customers often wait for an estimate before they can book.</p></div>
+        <div><div class="label">First uncertain handoff</div><p class="value">Qualified request → price/estimate ready for the customer.</p></div>
+        <div><div class="label">Competing causes</div><p class="value">Owner approval, missing job details, supplier lookup, unclear pricing rules, or simple queue delay.</p></div>
+        <div><div class="label">Evidence to collect</div><p class="value">10 recent leads: arrival time, qualification complete, estimate ready, booked/not booked, and who touched the quote.</p></div>
+        <div><div class="label">Smallest test</div><p class="value">Measure quote latency first; if one repeatable lookup/rule dominates the delay, prototype only that step.</p></div>
+        <div><div class="label">Do not change yet</div><p class="value">Do not add lead volume, replace the CRM, or automate the whole workflow before the delay is verified.</p></div>
+      </div>
+      <div class="note"><strong>Illustrative example, not a client-result claim.</strong> The actual output is built from the client’s real workflow and evidence.</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">What you get back</p>
+    <h2>One useful decision, not another dashboard.</h2>
+    <div class="deliverables">
+      <div class="deliverable"><strong>1-page workflow map</strong><br><span class="small">The lead-to-job path and the handoff currently worth attention.</span></div>
+      <div class="deliverable"><strong>Competing-cause check</strong><br><span class="small">What could explain the symptom, including what we do not know yet.</span></div>
+      <div class="deliverable"><strong>Evidence checklist</strong><br><span class="small">The smallest set of timestamps, examples or records needed to decide.</span></div>
+      <div class="deliverable"><strong>Smallest next test</strong><br><span class="small">A bounded intervention and the measurement that determines continue / change / kill.</span></div>
+    </div>
+  </section>
+
+  <section id="send">
+    <div class="cta">
+      <p class="eyebrow">Start with one client</p>
+      <h2 style="margin-bottom:12px">No integration or software purchase required.</h2>
+      <p class="support">Reply to the message that sent you this page with the five lines below. Rough answers are enough; I will tell you if there is not enough evidence to diagnose it.</p>
+      <div id="prompt" class="prompt">Client type: [HVAC / plumbing / electrical / roofing / other]
+Lead source: [Google / LSA / Meta / referral / mixed]
+Approx. lead or call volume: [rough range]
+Current path after a lead arrives: [who responds → qualifies → quotes → books]
+What feels broken or slow: [one concrete symptom]</div>
+      <button class="btn primary" type="button" onclick="copyPrompt()">Copy the 5-line prompt</button>
+      <div id="status" class="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Boundary</p>
+    <h2>No “AI transformation” pitch.</h2>
+    <p class="support">The diagnostic comes before implementation. If the bottleneck can be fixed with a routing rule, a clearer handoff, a different queue or a manual operating change, that is the recommendation. Automation is only proposed when the evidence shows a repeatable step is worth automating.</p>
+  </section>
+
+  <footer>Operational Constraint Diagnostic · Taha Aslam · Claims are limited to what the supplied workflow evidence supports.</footer>
+</div>
+<script>
+function copyPrompt(){
+  const text=document.getElementById('prompt').innerText;
+  const status=document.getElementById('status');
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(()=>status.textContent='Copied — paste it into your reply.').catch(()=>status.textContent='Select the five lines above and copy them.');}
+  else{status.textContent='Select the five lines above and copy them.';}
+}
+</script>
+</body>
+</html>
