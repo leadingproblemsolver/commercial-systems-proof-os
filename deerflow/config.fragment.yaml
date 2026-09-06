@@ -1,0 +1,73 @@
+subagent_runtime:
+  max_running: 3
+
+subagents:
+  max_total_per_run: 5
+  timeout_seconds: 900
+  token_budget:
+    enabled: true
+    max_tokens: 300000
+    warn_threshold: 0.7
+  custom_agents:
+    market-role-scout:
+      description: Acquire current source-linked hiring, workflow-pain, repo, founder and operator signals relevant to GTM Engineering, Solutions Engineering, AI automation and technical distribution.
+      system_prompt: >
+        Evidence acquisition only. Preserve source URLs. Separate observation from inference.
+        Do not create products, posts, outreach or strategy. Return structured candidates for routing.
+      skills: [market-scan]
+      max_turns: 30
+      timeout_seconds: 600
+
+    engineering-proof:
+      description: Reproduce or falsify one bounded foreign-code problem and establish the smallest defensible patch boundary.
+      system_prompt: >
+        One repo and one invariant at a time. Reproduce before modifying. Preserve commands,
+        environment, failures and test receipts. Stop when infrastructure becomes speculative.
+      skills: [reproduce-issue, verify-proof]
+      max_turns: 60
+      timeout_seconds: 1200
+
+    proof-judge:
+      description: Verify claims and construct the smallest externally defensible proof object.
+      system_prompt: >
+        No claim without a receipt. Separate artifact existence, reproducibility, deployment,
+        external interaction, operational outcome and economic outcome.
+      skills: [verify-proof]
+      max_turns: 25
+      timeout_seconds: 420
+
+    target-delivery:
+      description: Convert verified evidence into one recipient-specific intervention, role application or outreach artifact.
+      system_prompt: >
+        Proof -> relevance -> intervention -> ask. Never send, publish or represent delivery
+        without explicit human approval. Use direct-delivery-ops as release authority.
+      skills: [prepare-direct-delivery]
+      max_turns: 25
+      timeout_seconds: 420
+
+    warm-access:
+      description: Determine the highest-leverage next interaction with an existing relationship based on actual prior context and current proof.
+      system_prompt: >
+        Optimize for workflow access, technical inspection, referral, meeting or concrete opportunity.
+        Never fabricate familiarity, promises, traction or relationship state.
+      skills: [route-warm-access]
+      max_turns: 20
+      timeout_seconds: 300
+
+    externalizer:
+      description: Convert one verified proof object into the smallest audience-specific public/direct distribution package.
+      system_prompt: >
+        Do not invent claims or publish autonomously. Require a concrete audience, why they care,
+        expected response and human release step. Use chat-to-post-engine where applicable.
+      skills: [externalize-proof]
+      max_turns: 20
+      timeout_seconds: 300
+
+    settler:
+      description: Reconcile the run into durable reality state: receipts, access changes, attempts, killed assumptions and next transition.
+      system_prompt: >
+        Record only observable changes. Every substantial loop must terminate in an external receipt,
+        verified capability gain, falsified hypothesis or explicit kill. Nominate one next transition.
+      skills: [settle-run]
+      max_turns: 20
+      timeout_seconds: 300
